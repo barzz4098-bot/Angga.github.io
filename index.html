@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shape of My Heart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player">
+  <svg class="heart-mark" viewBox="0 0 46 46" aria-hidden="true">
+    <path d="M23 38 C 10 29, 4 21, 4 14 C 4 8, 8.5 4, 14 4 C 18 4, 21 6.5, 23 10 C 25 6.5, 28 4, 32 4 C 37.5 4, 42 8, 42 14 C 42 21, 36 29, 23 38 Z"/>
+  </svg>
+
+  <p class="title">Shape of My Heart</p>
+  <p class="artist">Backstreet Boys</p>
+
+  <div class="controls">
+    <button class="play-btn" id="playBtn" aria-label="Putar">
+      <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="pauseIcon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="time-row">
+      <span id="curTime">0:00</span>
+      <span id="durTime">0:00</span>
+    </div>
+    <div class="bar" id="bar" role="slider" aria-label="Posisi lagu" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+      <div class="bar-fill" id="barFill"></div>
+      <div class="bar-knob" id="barKnob"></div>
+    </div>
+  </div>
+</div>
+
+<audio id="audio" src="music/lagu1.mp3" preload="metadata"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
